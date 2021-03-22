@@ -1,0 +1,46 @@
+.remove-btn {
+    border: 0;
+    font-weight: bold;
+    color: red;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.push-right {
+  margin: 0 10px 0 0;
+}
+
+.info {
+    color: blue;
+    font-weight: bold;
+}
+
+span {
+    margin: 0 10px 0 0;
+}
+
+.box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border: 1px solid black;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.tiny-box {
+    border: 1px solid red;
+}
+
+.right {
+    float: right;
+}
