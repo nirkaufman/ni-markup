@@ -1,3 +1,4 @@
+// Logic
 class Item {
   private readonly _id: number;
   completed: boolean;
@@ -49,11 +50,18 @@ class Todolist<T> {
 
 const myTodolist = new Todolist<Item>('My List', []);
 
-console.log(myTodolist.items);
+// UI
+//todo: Render the myTodolist title to th DOM
+  //  1. get reference to th h1 element
+  //  2. set the inner text to the todolist title
+//todo: Render the items as li elements to the DOM
+//todo: Each time item added, re-create and show updated list
 
-myTodolist.addItem(new Item('Learn TS'));
+// todo: document.getElementById()
+// todo: document.createElement()
+// todo: <element>.appendChild(<element>)
 
-
-console.log(myTodolist.items);
+// todo: get reference to the button
+// todo: use: addEventListener('click', <pass function>)
 
 
