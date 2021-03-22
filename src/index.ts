@@ -20,7 +20,6 @@ class Item {
 
 
 }
-
 class Todolist<T> {
   private _items: Array<T>;
   title: string;
@@ -50,18 +49,34 @@ class Todolist<T> {
 
 const myTodolist = new Todolist<Item>('My List', []);
 
-// UI
-//todo: Render the myTodolist title to th DOM
-  //  1. get reference to th h1 element
-  //  2. set the inner text to the todolist title
-//todo: Render the items as li elements to the DOM
-//todo: Each time item added, re-create and show updated list
+//----------------------------
 
-// todo: document.getElementById()
-// todo: document.createElement()
-// todo: <element>.appendChild(<element>)
+const titleElement = document.getElementById('title');
+const addButton = document.getElementById('addItemButton');
+const listElement = document.getElementById('list');
+const inputElement = document.getElementById('input') as HTMLInputElement;
 
-// todo: get reference to the button
-// todo: use: addEventListener('click', <pass function>)
+titleElement.innerText = myTodolist.title;
+
+addButton.addEventListener('click', () => {
+  const newItem = new Item(inputElement.value);
+   myTodolist.addItem(newItem);
+  listElement.innerHTML = '';
+  renderList();
+})
+
+function renderList() {
+  myTodolist.items.forEach( item => {
+    const liElement = document.createElement('li');
+
+    liElement.innerHTML = `
+      <input type="checkbox">
+      <span>${item.title}</span>
+      <button class="remove-btn">X</button>
+    `;
+
+    listElement.appendChild(liElement);
+  })
+}
 
 

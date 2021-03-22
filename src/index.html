@@ -7,36 +7,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Todolist</title>
     <link rel="stylesheet" href="todos.css">
+
 </head>
 <body>
 
 
-<h1>Todos</h1>
-
-
+<h1 id="title"></h1>
     <section>
-        <input type="text">
-        <button>Add Item</button>
+        <input id="input" type="text" />
+        <button id="addItemButton">Add Item</button>
     </section>
-    <ul>
-        <li class="push-right">
-            <input type="checkbox">
-            <span>Item Name</span>
-            <button class="remove-btn">X</button>
-        </li>
-        <li class="push-right">
-            <input type="checkbox">
-            <span>Item Name</span>
-            <button>X</button>
-        </li>
-        <li>
-            <input type="checkbox">
-            <label class="push-right info">Item Name</label>
-            <button>X</button>
-        </li>
-    </ul>
+    <ul id="list"></ul>
      <footer>3 Items count</footer>
 
-    <script src="./index.js"></script>
+<script src="./index.js"></script>
 </body>
 </html>

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile": "tsc index.ts --target ES2020"
+    "compile": "tsc src/index.ts --target ES2020"
   },
   "author": " <nir kaufman>",
   "license": "MIT",
