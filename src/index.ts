@@ -60,7 +60,7 @@ titleElement.innerText = myTodolist.title;
 
 addButton.addEventListener('click', () => {
   const newItem = new Item(inputElement.value);
-   myTodolist.addItem(newItem);
+  myTodolist.addItem(newItem);
   listElement.innerHTML = '';
   renderList();
 })
